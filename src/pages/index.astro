@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Links from "./../components/links.astro";
+---
+
+<Layout title="Dev-Challeges FranciscoMelen10">
+  <nav>
+    <Links img="principal/blog.png" name="Minimal Blog" url="/MinimalBlog" />
+    <Links img="principal/card.png" name="Business Blog" url="/BusinessBlog" />
+    <Links img="principal/pages.png" name="Testimonial" url="/TestimonialPage"/>
+    <Links img="principal/pages.png" name="Contact Page" url="/ContactPage" />
+    <Links img="principal/pages.png" name="Minimal Blog" url="/MinimalBlog" />
+  </nav>
+</Layout>
+
+<style>
+  nav {
+    background-color: #002333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  a {
+    color: #ebf0ff;
+    text-decoration: none;
+    font-family: "Sora";
+    font-size: 30px;
+    transition: all 0.5s;
+  }
+
+  a:hover {
+    color: #96acff;
+  }
+
+  @media screen and (max-width: 885px) {
+    nav {
+      height: 100%;
+    }
+  }
+</style>

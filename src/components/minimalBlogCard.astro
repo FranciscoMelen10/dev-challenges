@@ -1,0 +1,101 @@
+---
+
+---
+
+<main>
+  <div>
+    <section>
+      <picture>
+        <img src="/cactus_img.jpg" alt="" />
+      </picture>
+      <h5>Desing</h5>
+      <article>
+        <h1>Embracing Minimalism</h1>
+        <p>
+          From minimalist sculptures to minimalist paintings, this blog will
+          inspire you to appreciate the beauty that lies in simplicity.
+        </p>
+      </article>
+    </section>
+    <aside>
+      <p class="tutor">Francisco Melendez</p>
+    </aside>
+  </div>
+</main>
+
+<style>
+  main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafaf9;
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+  }
+
+  picture {
+    width: 100%;
+    height: 150px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 16px 16px 0 16px;
+  }
+
+  div {
+    width: 368px;
+    background-color: #fff;
+    font-family: "Sora";
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 16px;
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.09);
+  }
+
+  h5 {
+    color: #883ae1;
+    background-color: #e6d6fc;
+    padding: 6px 16px;
+    display: inline;
+    font-size: 12px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  article p {
+    color: #6c727f;
+    font-size: 14px;
+  }
+
+  aside {
+    border-top: #e5eaf0 solid 1px;
+    width: 100%;
+  }
+
+  .tutor {
+    color: #6c727f;
+    font-size: 12px;
+    margin: 16px 16px 20px 16px;
+  }
+
+  @media screen and (max-width: 400px) {
+    div {
+      width: 350px;
+    }
+  }
+</style>
