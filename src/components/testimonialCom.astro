@@ -1,0 +1,256 @@
+---
+import Card from "./TestimonialCom/card.astro";
+
+const data = [
+  {
+    stars: 4,
+    name: "Samantha Lee",
+    desc: "The checklist ensures that the review process is thorough",
+    logo: "/Testimonial Page/google-testimonial.png",
+  },
+  {
+    stars: 5,
+    name: "Rachel Patel",
+    desc: "I highly recommend the Writecream Business Description",
+    logo: "/public/Testimonial Page/meta-testimonial.png",
+  },
+];
+---
+
+<div class="principal">
+  <div class="prin_ctn">
+    <img class="star" src="/public/Testimonial Page/Star_fill.svg" />
+    <h1>Reviewers</h1>
+    <p class="desc">
+      Reviewers is where people can access guidelines, checklists, and other
+      tools to assist them in reviewing papers or manuscripts. It provides a
+      structured approach to ensure that the review process is thorough,
+      efficient, and consistent.
+    </p>
+    <aside class="checks">
+      <ul>
+        <li>
+          <img src="/public/Testimonial Page/Done_ring_round_fill.svg" />
+          <p>Checklist to Review an Academic Paper</p>
+        </li>
+        <li>
+          <img src="/public/Testimonial Page/Done_ring_round_fill.svg" />
+          <p>Peer Review Checklist</p>
+        </li>
+        <li>
+          <img src="/public/Testimonial Page/Done_ring_round_fill.svg" />
+          <p>Checklist for Editors, Reviewers, and Authors of SPIE Journals</p>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <div class="cards_ctn">
+    <article class="ctn_google">
+      <aside>
+        <img
+          class="logo"
+          src="/public/Testimonial Page/google-testimonial.png"
+        />
+        <picture>
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill_gray.svg" />
+        </picture>
+      </aside>
+      <aside>
+        <h5>Samantha Lee</h5>
+        <p>The checklist ensures that the review process is thorough</p>
+      </aside>
+    </article>
+    <article class="ctn_meta">
+      <aside>
+        <img class="logo" src="/public/Testimonial Page/meta-testimonial.png" />
+        <picture>
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+          <img src="/public/Testimonial Page/Star_fill.svg" />
+        </picture>
+      </aside>
+      <aside>
+        <h5>Rachel Patel</h5>
+        <p>I highly recommend the Writecream Business Description</p>
+      </aside>
+    </article>
+  </div>
+</div>
+
+<style>
+  .principal {
+    font-family: "Sora";
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #fafaf9;
+  }
+
+  p{
+    color: #52525A;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  .prin_ctn,
+  .cards_ctn {
+    width: 50%;
+    margin: 0 25px;
+    max-width: 660px;
+  }
+
+  .prin_ctn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .prin_ctn .desc {
+    font-size: 18px;
+  }
+
+  .prin_ctn aside ul li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .prin_ctn aside ul li p {
+    text-align: justify;
+    margin: 0 5px;
+  }
+
+  .prin_ctn .checks {
+    font-size: 14px;
+  }
+
+  .prin_ctn .star {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cards_ctn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr;
+    grid-template-rows: 190px 190px;
+    gap: 20px;
+  }
+
+  .cards_ctn article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 360px;
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+  }
+
+  .cards_ctn aside:first-child {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cards_ctn aside .logo {
+    height: 40px;
+  }
+
+  .cards_ctn .ctn_google {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .cards_ctn .ctn_meta {
+    grid-column-start: -6;
+    grid-column-end: -2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .cards_ctn picture {
+    display: flex;
+  }
+
+  h5 {
+    font-weight: 900;
+    font-family: "Sora";
+  }
+
+  @media screen and (max-width: 930px) {
+    .cards_ctn article {
+      padding: 20px;
+    }
+    .cards_ctn aside .logo {
+      height: 30px;
+    }
+
+    .cards_ctn p {
+      font-size: 12px;
+    }
+
+    .cards_ctn h5 {
+      font-size: 14px;
+    }
+
+    .cards_ctn article {
+      justify-content: space-evenly;
+    }
+
+    .prin_ctn .desc {
+      font-size: 15px;
+    }
+
+    .prin_ctn h1 {
+      font-size: 25px;
+    }
+
+    .prin_ctn .checks {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .principal {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      padding: 80px 30px;
+    }
+
+    .prin_ctn,
+    .cards_ctn {
+      width: 100%;
+    }
+
+    .cards_ctn {
+      grid-template-columns: 1fr 0.5fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .cards_ctn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
