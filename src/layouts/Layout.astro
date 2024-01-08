@@ -1,6 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -24,9 +23,16 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Poppins:ital,wght@1,300&family=Sora&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <ViewTransitions></ViewTransitions>
+    <ViewTransitions />
     <slot />
   </body>
 </html>
