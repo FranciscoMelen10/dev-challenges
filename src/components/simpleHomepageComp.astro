@@ -1,0 +1,320 @@
+---
+import { ThemeSwitch } from "astro-color-scheme";
+---
+
+<main>
+  <ThemeSwitch strategy="checkbox">
+  <header>
+    <picture>
+      <img src="/Homepage/alarado-icon-homepage.svg" alt="" />
+    </picture>
+    <img src="/Homepage/menu-outline.svg" class="menu">
+    <div class="nav_cont phone_screen">
+      <nav>
+        <a href="#"><strong>About us</strong></a>
+        <a href="#" class="text_opac"><>Product</a>
+        <a href="#" class="text_opac"><>Resource</a>
+        <a href="#" class="text_opac"><>Contact</a>
+      </nav>
+
+        <div class="switch phone" id="switch">
+          <input type="checkbox" id="toggle" class="offscreen" />
+          <label for="toggle" class="lb_toggle">
+            <img src="/Homepage/Sun_fill.svg" class="sun_fill" alt="sun_fill" />
+            <img src="/Homepage/Moon_fill.svg" class="moon_fill" alt="moon" />
+            <img src="/Homepage/Sun_fill_light.svg" class="sun" alt="sun_fill" />
+            <img src="/Homepage/Moon_fill_light.svg" class="moon" alt="moon" />
+          </label>
+        </div>
+        <img src="/Homepage/close.svg" class="close">
+
+    </div>
+  </header>
+
+  <div class="prin_cont">
+    <section class="communicate_section">
+      <h5>😎 Simple way to communicate</h5>
+      <h1>Actions for Accessibility in Design</h1>
+      <article>
+        <p class="decs">
+          The fastest way to build and deploy websites with resusable
+          components.
+        </p>
+        <label class="start">
+          <button class="get_start">GET STARTED</button>
+          <a class="a_start">Get live demo</a>
+        </label>
+      </article>
+      <article class="down">
+        <aside>
+          <img src="/Homepage/Done_ring_round_fill.svg" alt="" />
+          <p>No credit card required</p>
+        </aside>
+        <aside>
+          <img src="/Homepage/Done_ring_round_fill.svg" alt="" />
+          <p>No software to install</p>
+        </aside>
+      </article>
+    </section>
+    <picture>
+      <img src="/Homepage/hero-image-simple-homepage.png" alt="" />
+    </picture>
+  </div>
+</ThemeSwitch>
+</main>
+
+<script src="../JS/header.js"></script>
+
+<style>
+  main {
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s;
+  }
+
+  h5 {
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 900;
+  }
+
+  header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .text_opac {
+    color: #909193;
+  }
+
+  .nav_cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  .menu,
+  .close {
+    width: 30px;
+    height: 30px;
+    display: none;
+  }
+
+  .decs {
+    color: #909193;
+    font-size: 18px;
+    padding-bottom: 15px;
+  }
+
+  .get_start {
+    width: 170px;
+    height: 45px;
+    background-color: #2a4dd0;
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  .start {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .a_start {
+    color: #2a4dd0;
+    font-weight: 600;
+    text-decoration: underline #2a4dd0;
+    font-size: 18px;
+  }
+
+  .prin_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 60px;
+  }
+
+  .prin_cont section,
+  .prin_cont picture {
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    max-height: 470px;
+  }
+
+  .prin_cont section {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .switch {
+    display: flex;
+  }
+
+  .lb_toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #223344;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 1s linear;
+  }
+
+  .lb_toggle .sun_fill,
+  .lb_toggle .moon_fill,
+  .lb_toggle .sun,
+  .lb_toggle .moon {
+    position: absolute;
+    top: 7px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .lb_toggle .moon_fill,
+  .lb_toggle .moon {
+    left: 7px;
+  }
+
+  .lb_toggle .moon_fill {
+    z-index: 1;
+  }
+
+  .lb_toggle .sun_fill,
+  .lb_toggle .sun {
+    right: 7px;
+  }
+
+  .lb_toggle::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    left: 5px;
+    top: 5px;
+  }
+
+  input[type="checkbox"]:checked + .lb_toggle::before {
+    transform: translateX(30px);
+    background-color: rgb(255, 255, 255);
+  }
+
+  input[type="checkbox"]:checked + .lb_toggle .sun_fill {
+    z-index: 1;
+  }
+
+  input[type="checkbox"]:checked + .lb_toggle .moon {
+    z-index: -1;
+  }
+
+  input[type="checkbox"]:checked + .lb_toggle .moon {
+    z-index: 1;
+  }
+
+  .offscreen {
+    display: none;
+  }
+
+  .down {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .down aside {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .prin_cont {
+      flex-direction: column-reverse;
+      height: auto;
+    }
+
+    .prin_cont section,
+    .prin_cont picture {
+      max-width: none;
+      max-height: none;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    nav {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .nav_cont {
+      display: none;
+    }
+
+    .nav_cont.visible {
+      position: fixed;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      top: 0;
+      bottom: 0; /* Cambiado de top a bottom */
+      background-color: #2a4dd0;
+      width: 150px;
+      height: auto; /* Cambiado de 100% a auto */
+    }
+
+    .menu,
+    .close {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .prin_cont {
+      padding: 15px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    h5 {
+      font-size: 10px;
+    }
+
+    .decs {
+      font-size: 10px;
+    }
+
+    .communicate_section {
+      margin-top: 20px;
+      gap: 20px;
+    }
+  }
+</style>
